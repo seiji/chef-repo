@@ -1,1 +1,6 @@
-{"run_list":["yum::epel"]}
+{
+    "recipes":[
+        "yum::epel",
+        "base_packages"
+    ]
+}

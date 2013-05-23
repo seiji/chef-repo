@@ -7,6 +7,11 @@ namespace :knife do
     task :prepare, :host do |task, args|
       system_or_exit %Q[knife solo prepare #{args.host}]
     end
+
+    desc 'Cook host'
+    task :cook, :host do |task, args|
+      system_or_exit %Q[knife solo cook #{args.host}]
+    end
   end
 
   namespace :cookbook do

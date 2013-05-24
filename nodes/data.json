@@ -1,6 +1,8 @@
 {
     "recipes":[
         "yum::epel",
-        "base_packages"
+        "base_packages",
+        "rbenv::default",
+        "rbenv::install"
     ]
 }

@@ -40,3 +40,11 @@ git "/usr/local/rbenv/plugins/ruby-build" do
   user "#{node.user}"
   group "rbenv"
 end
+
+git "/usr/local/rbenv/plugins/rbenv-default-gems" do
+  repository "git://github.com/sstephenson/rbenv-default-gems.git"
+  reference "master"
+  action :checkout
+  user "#{node.user}"
+  group "rbenv"
+end

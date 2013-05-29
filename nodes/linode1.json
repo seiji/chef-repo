@@ -6,6 +6,7 @@
         "recipe[ntp]",
         "recipe[sysctl]",
         "recipe[timezone]",
-        "recipe[iptables]"        
+        "recipe[iptables]",   
+        "recipe[base_packages::centos]"
     ]
 }

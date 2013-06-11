@@ -7,6 +7,8 @@
         "recipe[sysctl]",
         "recipe[timezone]",
         "recipe[iptables]",   
-        "recipe[base_packages::centos]"
+        "recipe[base_packages::centos]",
+        "recipe[deploy_user]",
+        "recipe[nginx]"
     ]
 }

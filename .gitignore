@@ -1,3 +1,4 @@
 cookbooks/*
 !cookbooks/.gitkeep
 Gemfile.lock
+vendor

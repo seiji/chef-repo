@@ -1,4 +1,8 @@
 {
+    "app": {
+        "name": "linode1"
+    },
+
     "run_list":[    
         "recipe[selinux::disabled]",
         "recipe[yum::epel]",
@@ -8,7 +12,12 @@
         "recipe[timezone]",
         "recipe[iptables]",   
         "recipe[base_packages::centos]",
-        "recipe[deploy_user]",
-        "recipe[nginx]"
+        "role[web]"
+        // "recipe[deploy_user]",
+        // "recipe[nginx]"
+        
+        // "recipe[rbenv::default]",
+        // "recipe[rbenv::install]",
+        // "recipe[nginx]"
     ]
 }

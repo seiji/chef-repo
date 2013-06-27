@@ -17,6 +17,7 @@
     },
     "run_list": [
         "recipe[runit]",
-        "recipe[nginx::source]"
+        "recipe[nginx::source]",
+        "recipe[td-agent]",
     ]
 }

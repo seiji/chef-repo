@@ -1,0 +1,52 @@
+{
+  "sha": "9bfc2aff390d0f575b5f3dda31d4c86f19145be8",
+  "sources": {
+    "selinux": {
+      "locked_version": "0.5.6"
+    },
+    "yum": {
+      "locked_version": "2.2.2"
+    },
+    "openssh": {
+      "locked_version": "1.2.0"
+    },
+    "ntp": {
+      "locked_version": "1.3.2"
+    },
+    "sysctl": {
+      "locked_version": "0.3.2"
+    },
+    "users": {
+      "locked_version": "1.5.0"
+    },
+    "nginx": {
+      "locked_version": "1.4.0"
+    },
+    "runit": {
+      "locked_version": "1.0.0"
+    },
+    "chef-td-agent": {
+      "locked_version": "0.0.1",
+      "git": "https://github.com/treasure-data/chef-td-agent.git",
+      "ref": "ee26bee34c29457aafce2f900ce2d0e04d9ff792"
+    },
+    "iptables": {
+      "locked_version": "0.12.0"
+    },
+    "bluepill": {
+      "locked_version": "2.2.2"
+    },
+    "rsyslog": {
+      "locked_version": "1.6.0"
+    },
+    "build-essential": {
+      "locked_version": "1.4.0"
+    },
+    "apt": {
+      "locked_version": "1.9.2"
+    },
+    "ohai": {
+      "locked_version": "1.1.8"
+    }
+  }
+}

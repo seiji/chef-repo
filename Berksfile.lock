@@ -1,5 +1,5 @@
 {
-  "sha": "9bfc2aff390d0f575b5f3dda31d4c86f19145be8",
+  "sha": "2009cee0c70a66d642a73187ed8bb377c93e2588",
   "sources": {
     "selinux": {
       "locked_version": "0.5.6"
@@ -25,7 +25,17 @@
     "runit": {
       "locked_version": "1.0.0"
     },
-    "chef-td-agent": {
+    "mongodb": {
+      "locked_version": "0.12.0",
+      "git": "git://github.com/edelight/chef-mongodb.git",
+      "ref": "e56f80b599e05ff46039b09a0fa65d325c4ba46b"
+    },
+    "redis": {
+      "locked_version": "0.0.2",
+      "git": "git://github.com/kenjiskywalker/cookbooks-redis.git",
+      "ref": "95ad3dd59656d2be2ffc95d12c29cd835b161219"
+    },
+    "td-agent": {
       "locked_version": "0.0.1",
       "git": "https://github.com/treasure-data/chef-td-agent.git",
       "ref": "ee26bee34c29457aafce2f900ce2d0e04d9ff792"

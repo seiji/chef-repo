@@ -12,9 +12,9 @@
         "recipe[timezone]",
         "recipe[iptables]",   
         "recipe[base_packages::centos]",
-        "role[web]"
+        "role[web]",
+        "role[mongodb]"
         // "recipe[deploy_user]",
-        // "recipe[nginx]"
         
         // "recipe[rbenv::default]",
         // "recipe[rbenv::install]",

@@ -5,9 +5,9 @@
     "description": "kbs",
     "default_attributes": {
         "mongodb": {
-//            "package_version": "2.4.4",
-//            "package_name": " mongo-10gen"
-            "install_method": "package"
+//            "package_version": "2.3.4",
+//            "package_name": "mongo-10gen-server"
+//            "install_method": "package"
         }
     },
     "run_list": [

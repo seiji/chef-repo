@@ -12,6 +12,11 @@ namespace :knife do
     task :cook, :host do |task, args|
       system_or_exit %Q[knife solo cook #{args.host}]
     end
+
+    desc 'Clean host'
+    task :clean, :host do |task, args|
+      system_or_exit %Q[knife solo clean #{args.host}]
+    end
   end
 
   namespace :cookbook do

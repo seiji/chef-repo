@@ -2,10 +2,11 @@
     "app": {
         "name": "linode1"
     },
-
     "run_list":[    
         "recipe[selinux::disabled]",
         "recipe[yum::epel]",
+        "recipe[yum::fastestmirror]",
+        "recipe[yum::update]",
         "recipe[openssh]",
         "recipe[ntp]",
         "recipe[sysctl]",
@@ -13,7 +14,8 @@
         "recipe[iptables]",   
         "recipe[base_packages::centos]",
         "role[web]",
-        "role[mongodb]"
+        "role[mongodb]",
+        "role[znc]"           // required chef-solo-search
         // "recipe[deploy_user]",
         
         // "recipe[rbenv::default]",

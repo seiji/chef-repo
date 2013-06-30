@@ -1,0 +1,83 @@
+#! /bin/sh
+### BEGIN INIT INFO
+# Provides:          znc
+# Default-Start:     2 3 4 5
+# Default-Stop:      0 1 6
+# Short-Description: znc initscript
+# Description:       This is the init-Script for znc.
+### END INIT INFO
+
+# Original Author: Henner M. Kruse
+# Author: Seth Chisamore
+#
+# Please remove the "Author" lines above and replace them
+# with your own name if you copy and modify this script.
+
+# Do NOT "set -e"
+
+# PATH should only include /usr/* if it runs after the mountnfs.sh script
+PATH=/sbin:/usr/sbin:/bin:/usr/bin:/usr/local/bin
+DESC="znc, an advanced modular IRC bouncer"
+NAME=znc
+DAEMON=$(which $NAME)
+ARGS="-d /etc/znc"
+PIDFILE=/etc/znc/$NAME.pid
+LOCKFILE=/var/lock/subsys/znc
+
+SCRIPTNAME=/etc/init.d/$NAME
+USER=<%= node['znc']['user'] %>
+GROUP=<%= node['znc']['group'] %>
+VERBOSE=yes
+
+# Exit if the package is not installed
+[ -x "$DAEMON" ] || exit 0
+
+. /etc/rc.d/init.d/functions
+
+
+start(){
+    echo -n "Starting ${NAME} : "
+    RETVAL=1
+    if [ -s ${PIDFILE} ]; then
+        echo -n "Already running !" && warning
+        echo
+    else
+        daemon --user $USER --pidfile $PIDFILE $DAEMON $ARGS # not working creating pidfile. so znc writes it.
+        RETVAL=$?
+        [ $RETVAL -eq 0 ] && touch ${LOCKFILE} && success || failure
+    fi
+    return $RETVAL
+}
+
+stop(){
+    echo -n "Stopping ${NAME} : "
+    killproc -p $PIDFILE $DAEMON
+    RETVAL=$?
+    echo
+    if [ $RETVAL -eq 0 ]; then
+        rm -f ${LOCKFILE}
+        rm -f ${PIDFILE}
+    fi
+    return $RETVAL
+}
+
+case "$1" in
+    start)
+        start
+        ;;
+    stop)
+        stop
+        ;;
+    restart|reload)
+        stop
+        start
+        ;;
+    status)
+        status $DAEMON
+        ;;
+    *)
+        echo "Usage: $0 {start|stop|restart|reload|status}"
+        exit 1
+esac
+
+exit 0

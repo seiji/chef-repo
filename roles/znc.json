@@ -1,0 +1,42 @@
+{
+    "name": "znc",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "description": "kbs",
+    "default_attributes": {
+        "znc": {
+            "max_buffer_size": "500",
+            "install_method": "package",
+            "users": [
+                {
+                    "id": "eroseiji",
+                    "comment": "comment",
+                    "keep_buffer": true,
+                    "timezone_offset": "0.00",
+                    "znc": {
+                        "modules": [
+                            "log",
+                            "admin",
+                            "keepnick",
+                            "nickserv",
+                            "simple_away"
+                        ],
+                        "pass": "password",
+                        "ident": "seijit@me.com",
+                        "alt_nick": "seijit",
+                        "server": "chat.freenode.net 6667",
+                        "channels": [
+                            "#seijit",
+                            "#bami2",
+                            "#bam1"
+                        ]
+                    }
+                }
+            ]
+        }
+    },
+    "run_list": [
+        "recipe[chef-solo-search]",
+        "recipe[znc]"
+    ]
+}

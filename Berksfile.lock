@@ -1,5 +1,5 @@
 {
-  "sha": "2009cee0c70a66d642a73187ed8bb377c93e2588",
+  "sha": "97cc135f3d94ddd6392273a310347818b9ff2cf2",
   "sources": {
     "selinux": {
       "locked_version": "0.5.6"
@@ -29,6 +29,11 @@
       "locked_version": "0.12.0",
       "git": "git://github.com/edelight/chef-mongodb.git",
       "ref": "e56f80b599e05ff46039b09a0fa65d325c4ba46b"
+    },
+    "chef-solo-search": {
+      "locked_version": "0.4.0",
+      "git": "https://github.com/edelight/chef-solo-search.git",
+      "ref": "1f79c1d86e85aa3a2b01e15f90755cf60eb66a4f"
     },
     "redis": {
       "locked_version": "0.0.2",

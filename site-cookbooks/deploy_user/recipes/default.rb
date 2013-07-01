@@ -12,6 +12,12 @@ node_group = node['deploy_user']['group']
 user node_user
 group node_group
 
+group "wheel" do
+  action [:modify]
+  members [node_user]
+  append true
+end
+
 [ node['deploy_user']['data_dir'],
 ].each do |dir|
   directory dir do

@@ -4,12 +4,19 @@
     "json_class": "Chef::Role",
     "description": "kbs",
     "default_attributes": {
+        "build_essential":{"compiletime": "false"},
         "znc": {
+            "version": "1.0",
+            "configure_options":[
+                "--with-openssl=/usr/include/openssl"
+            ],
             "max_buffer_size": "500",
-            "install_method": "package",
+            "modules": ["adminlog"],
+            "install_method": "source",
             "users": [
                 {
-                    "id": "eroseiji",
+                    "id": "seiji",
+                    "buffer": "200",
                     "comment": "comment",
                     "keep_buffer": true,
                     "timezone_offset": "0.00",
@@ -21,14 +28,27 @@
                             "nickserv",
                             "simple_away"
                         ],
-                        "pass": "password",
+                        "pass": "sha256#9c1780d1b5f7b2d7c07b6bbd1c57c365f5258cdc759b371363649bf7eb909aa3#h1tovuAUjn_y5KEsThSr#",
                         "ident": "seijit@me.com",
                         "alt_nick": "seijit",
-                        "server": "chat.freenode.net 6667",
-                        "channels": [
-                            "#seijit",
-                            "#bami2",
-                            "#bam1"
+                        "networks": [
+                            {
+                                "name": "freenode",
+                                "server": "chat.freenode.net 6667",
+                                "channels": [
+                                    "#seijit",
+                                    "#bami2",
+                                    "#bam1",
+                                    "#crashlogs"
+                                ]
+                            },
+                            {
+                                "name": "layback",
+                                "server": "layback-lab.com +6669",
+                                "channels": [
+                                    "#emag4"
+                                ]
+                            }
                         ]
                     }
                 }

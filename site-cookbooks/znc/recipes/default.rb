@@ -76,5 +76,5 @@ end
 
 service "znc" do
   supports :restart => true
-  action [:enable, :start]
+  action [:enable, :restart]
 end

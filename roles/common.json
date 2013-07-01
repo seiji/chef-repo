@@ -22,10 +22,12 @@
                     "-p tcp -m tcp --dport 9418  -j ACCEPT"
                 ]
             }
+        },
+        "deploy_user": {
         }
     },
     "run_list": [
-        "recipe[hostname]"
+        "recipe[hostname]",
         "recipe[selinux::disabled]",
         "recipe[yum::epel]",
         // "recipe[yum::fastestmirror]",
@@ -35,6 +37,7 @@
         "recipe[sysctl]",
         "recipe[timezone]",
         "recipe[iptables]",
-        "recipe[base_packages::centos]"
+        "recipe[base_packages::centos]",
+        "recipe[deploy_user]"
     ]
 }

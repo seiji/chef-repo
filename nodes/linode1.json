@@ -10,7 +10,6 @@
         "role[mongodb]",
         "role[znc]"           // required chef-solo-search
 
-        // "recipe[deploy_user]",
         // "recipe[rbenv::default]",
         // "recipe[rbenv::install]",
         // "recipe[nginx]"

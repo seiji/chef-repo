@@ -34,7 +34,7 @@
                         "networks": [
                             {
                                 "name": "freenode",
-                                "server": "chat.freenode.net 6667",
+                                "server": "chat.freenode.net +6697",
                                 "channels": [
                                     "#seijit",
                                     "#bami2",
@@ -44,7 +44,7 @@
                             },
                             {
                                 "name": "layback",
-                                "server": "layback-lab.com +6669",
+                                "server": "layback-lab.com +6697",
                                 "channels": [
                                     "#emag4"
                                 ]

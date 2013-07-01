@@ -1,0 +1,39 @@
+{
+    "name": "common",
+    "chef_type": "role",
+    "json_class": "Chef::Role",
+    "description": "common packages",
+    "default_attributes": {
+        "iptables": {
+            "filter": {
+                "INPUT": [
+                    "-p tcp -m tcp --dport 1181  -j ACCEPT",
+                    "-p tcp -m tcp --dport 3128  -j ACCEPT",
+                    "-p tcp -m tcp --dport 6667  -j ACCEPT",      // irc
+                    "-p tcp -m tcp --dport 24224 -j ACCEPT",      // fluentd
+                    "-p udp -m udp --dport 24224 -j ACCEPT",      // fluentd
+                    "-p udp -m udp --dport 60000:61000 -j ACCEPT" // mosh-server
+                ],
+                "OUTPUT": [
+                    "-p tcp -m tcp --dport 1181  -j ACCEPT",
+                    "-p tcp -m tcp --dport 3128  -j ACCEPT",
+                    "-p tcp -m tcp --dport 6667  -j ACCEPT", // irc
+                    "-p tcp -m tcp --dport 6697  -j ACCEPT", // irc
+                    "-p tcp -m tcp --dport 9418  -j ACCEPT"
+                ]
+            }
+        }
+    },
+    "run_list": [
+        "recipe[selinux::disabled]",
+        "recipe[yum::epel]",
+        // "recipe[yum::fastestmirror]",
+        // "recipe[yum::update]",
+        "recipe[openssh]",
+        "recipe[ntp]",
+        "recipe[sysctl]",
+        "recipe[timezone]",
+        "recipe[iptables]",
+        "recipe[base_packages::centos]"
+    ]
+}

@@ -16,11 +16,12 @@
             "users": [
                 {
                     "id": "seiji",
-                    "buffer": "200",
                     "comment": "comment",
                     "keep_buffer": true,
                     "timezone_offset": "0.00",
                     "znc": {
+                        "buffer": "500",
+                        "keep_buffer": true,
                         "modules": [
                             "log",
                             "admin",

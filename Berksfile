@@ -1,4 +1,5 @@
 site :opscode
+cookbook 'hostname'
 cookbook 'selinux'
 cookbook 'yum'
 cookbook 'openssh'

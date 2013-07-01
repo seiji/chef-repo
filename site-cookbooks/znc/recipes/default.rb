@@ -46,8 +46,6 @@ end
 
 users =  node['znc']['users'] || search(:users, 'groups:znc')
 
-require "pp"
-pp users
 # znc doesn't like to be automated...this prevents a race condition
 # http://wiki.znc.in/Configuration#Editing_config
 execute "force-save-znc-config" do

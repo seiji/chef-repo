@@ -2,7 +2,9 @@
     "app": {
         "name": "linode1"
     },
-    "run_list":[    
+    "set_fqdn": "irc.seiji.me",
+
+    "run_list":[
         "role[common]",
         "role[web]",
         "role[mongodb]",

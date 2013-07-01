@@ -9,7 +9,7 @@
                 "INPUT": [
                     "-p tcp -m tcp --dport 1181  -j ACCEPT",
                     "-p tcp -m tcp --dport 3128  -j ACCEPT",
-                    "-p tcp -m tcp --dport 6667  -j ACCEPT",      // irc
+                    "-p tcp -m tcp --dport 6697  -j ACCEPT",      // irc
                     "-p tcp -m tcp --dport 24224 -j ACCEPT",      // fluentd
                     "-p udp -m udp --dport 24224 -j ACCEPT",      // fluentd
                     "-p udp -m udp --dport 60000:61000 -j ACCEPT" // mosh-server
@@ -25,6 +25,7 @@
         }
     },
     "run_list": [
+        "recipe[hostname]"
         "recipe[selinux::disabled]",
         "recipe[yum::epel]",
         // "recipe[yum::fastestmirror]",

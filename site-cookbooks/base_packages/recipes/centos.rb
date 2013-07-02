@@ -7,7 +7,9 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w{sysstat zsh mosh tmux emacs-nox}.each do |pkg|
+%w{sysstat zsh mosh tmux emacs-nox
+git openssl-devel gcc make gdb
+}.each do |pkg|
   package pkg do
     action :install
   end

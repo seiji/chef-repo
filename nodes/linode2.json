@@ -1,11 +1,21 @@
 {
-    "app": {
-        "name": "linode2"
-    },
+    "id": "linode2",
+    "name": "linode2",
+    "chef_environment": "_default",
     "set_fqdn": "bin.seiji.me",
 
+    "mongodb": {
+        "cluster_name": "data_cluster",
+        "replicaset_name": "data_replicaset",
+        "replicaset_hosts": [
+            "linode1:27017"
+        ]
+    },
+
     "run_list":[
+        "role[base]",
         "role[common]",
-        "role[mongodb]"
+        "recipe[mongodb::10gen_repo]",
+        "recipe[mongodb::replicaset]"
     ]
 }

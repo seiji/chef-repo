@@ -1,17 +1,19 @@
 {
-    "app": {
-        "name": "linode1"
-    },
+    "id": "linode1",
+    "name": "linode1",
     "set_fqdn": "irc.seiji.me",
 
-    "run_list":[
-        "role[common]",
-        "role[web]",
-        "role[mongodb]",
-        "role[znc]"           // required chef-solo-search
+    "mongodb": {
+        "cluster_name": "data_cluster",
+        "replicaset_name": "data_replicaset"
+    },
 
-        // "recipe[rbenv::default]",
-        // "recipe[rbenv::install]",
-        // "recipe[nginx]"
+    "run_list":[
+        "role[base]",
+        "role[common]",
+        // "role[web]",
+        // "role[znc]"
+        "recipe[mongodb::10gen_repo]",
+        "recipe[mongodb::default]"
     ]
 }

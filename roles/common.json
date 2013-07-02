@@ -27,17 +27,19 @@
         }
     },
     "run_list": [
+        "recipe[deploy_user]",
         "recipe[hostname]",
         "recipe[selinux::disabled]",
         "recipe[yum::epel]",
-        // "recipe[yum::fastestmirror]",
-        // "recipe[yum::update]",
+        "recipe[yum::fastestmirror]",
+        "recipe[yum::update]",
         "recipe[openssh]",
         "recipe[ntp]",
         "recipe[sysctl]",
         "recipe[timezone]",
         "recipe[iptables]",
         "recipe[base_packages::centos]",
-        "recipe[deploy_user]"
+        "recipe[rbenv::default]",
+        "recipe[rbenv::install]"
     ]
 }

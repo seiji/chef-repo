@@ -1,8 +1,17 @@
 {
+    "id": "data",
+    "name": "data",
+    "set_fqdn": "data.seiji.me",
+
+    "mongodb": {
+        "cluster_name": "data_cluster",
+        "replicaset_name": "data_replicaset"
+    },
+
     "recipes":[
-        "yum::epel",
-        "base_packages",
-        "rbenv::default",
-        "rbenv::install"
+        "role[base]",
+        "role[common]"
+        "recipe[mongodb::10gen_repo]",
+        "recipe[mongodb::default]"
     ]
 }

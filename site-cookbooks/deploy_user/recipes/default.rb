@@ -45,6 +45,8 @@ if user and user['dir'] and user['dir'] != "/dev/null"
           ssh_keys += Array(line.delete "\n")
         end
       end
+      ssh_keys.uniq!
+
     else
       directory "#{home_dir}/.ssh" do
         owner user['uid']

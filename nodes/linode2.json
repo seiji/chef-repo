@@ -1,0 +1,11 @@
+{
+    "app": {
+        "name": "linode2"
+    },
+    "set_fqdn": "bin.seiji.me",
+
+    "run_list":[
+        "role[common]",
+        "role[mongodb]"
+    ]
+}

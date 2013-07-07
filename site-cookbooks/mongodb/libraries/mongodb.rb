@@ -42,7 +42,7 @@ class Chef::ResourceDefinitionList::MongoDB
     hosts = node['mongodb']['replicaset_hosts']
 
     rs_members = []
-    hosts.each do |host|
+    hosts.each_with_index do |host, n|
       rs_members << {"_id" => n, "host" => "#{host}"} # host:port
     end
 

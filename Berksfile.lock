@@ -1,6 +1,9 @@
 {
-  "sha": "97cc135f3d94ddd6392273a310347818b9ff2cf2",
+  "sha": "40f1a1f60378383a61708d4ff39e913b38298ecf",
   "sources": {
+    "hostname": {
+      "locked_version": "0.1.0"
+    },
     "selinux": {
       "locked_version": "0.5.6"
     },
@@ -25,25 +28,21 @@
     "runit": {
       "locked_version": "1.0.0"
     },
-    "mongodb": {
-      "locked_version": "0.12.0",
-      "git": "git://github.com/edelight/chef-mongodb.git",
-      "ref": "e56f80b599e05ff46039b09a0fa65d325c4ba46b"
-    },
     "chef-solo-search": {
       "locked_version": "0.4.0",
       "git": "https://github.com/edelight/chef-solo-search.git",
       "ref": "1f79c1d86e85aa3a2b01e15f90755cf60eb66a4f"
     },
-    "redis": {
-      "locked_version": "0.0.2",
-      "git": "git://github.com/kenjiskywalker/cookbooks-redis.git",
-      "ref": "95ad3dd59656d2be2ffc95d12c29cd835b161219"
+    "mongodb": {
+      "locked_version": "0.12.0",
+      "git": "git://github.com/edelight/chef-mongodb.git",
+      "ref": "e56f80b599e05ff46039b09a0fa65d325c4ba46b"
     },
-    "td-agent": {
-      "locked_version": "0.0.1",
-      "git": "https://github.com/treasure-data/chef-td-agent.git",
-      "ref": "ee26bee34c29457aafce2f900ce2d0e04d9ff792"
+    "znc": {
+      "path": "./site-cookbooks/znc"
+    },
+    "hostsfile": {
+      "locked_version": "1.0.2"
     },
     "iptables": {
       "locked_version": "0.12.0"

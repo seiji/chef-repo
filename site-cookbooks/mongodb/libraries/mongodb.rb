@@ -39,7 +39,7 @@ class Chef::ResourceDefinitionList::MongoDB
       return
     end
 
-    hosts = node['mongodb']['replicaset_hosts']
+    hosts = node['mongodb']['replicaset_hosts'] || []
 
     rs_members = []
     hosts.each_with_index do |host, n|
@@ -56,7 +56,6 @@ class Chef::ResourceDefinitionList::MongoDB
         "_id" => name,
         "members" => rs_members
     }
-    
 
     begin
       result = admin.command(cmd, :check_response => false)

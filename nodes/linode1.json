@@ -4,8 +4,7 @@
     "set_fqdn": "irc.seiji.me",
 
     "mongodb": {
-        "cluster_name": "data_cluster",
-        "replicaset_name": "data_replicaset"
+        "replicaset_name": "repSetData"
     },
 
     "run_list":[
@@ -14,6 +13,6 @@
         // "role[web]",
         // "role[znc]"
         "recipe[mongodb::10gen_repo]",
-        "recipe[mongodb::default]"
+        "recipe[mongodb::replicaset]"
     ]
 }

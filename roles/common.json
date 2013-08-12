@@ -10,6 +10,7 @@
                     "-p tcp -m tcp --dport 1181  -j ACCEPT",
                     "-p tcp -m tcp --dport 3128  -j ACCEPT",
                     "-p tcp -m tcp --dport 6697  -j ACCEPT",      // irc
+                    "-p tcp -m tcp --dport 8080  -j ACCEPT",
                     "-p tcp -m tcp --dport 27017 -j ACCEPT",      // mongod
                     "-p udp -m udp --dport 60000:61000 -j ACCEPT" // mosh-server
                 ],
@@ -24,7 +25,13 @@
             }
         },
         "deploy_user": {
+        },
+        "git": {
+            "version": "1.8.3.4",
+            "url": "https://git-core.googlecode.com/files/git-1.8.3.4.tar.gz",
+            "checksum": "fe633d02f7d964842d7ea804278b75120fc60c11"
         }
+
     },
     "run_list": [
         "recipe[deploy_user]",
@@ -38,6 +45,7 @@
         "recipe[sysctl]",
         "recipe[timezone]",
         "recipe[iptables]",
+        "recipe[git::source]",
         "recipe[base_packages::centos]",
         "recipe[rbenv::default]",
         "recipe[rbenv::install]"

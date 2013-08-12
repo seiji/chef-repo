@@ -11,7 +11,7 @@
         "role[base]",
         "role[common]",
         // "role[web]",
-        // "role[znc]"
+        "role[znc]",
         "recipe[mongodb::10gen_repo]",
         "recipe[mongodb::replicaset]"
     ]

@@ -10,7 +10,6 @@ cookbook 'nginx', '1.4.0'
 cookbook 'runit', '1.0.0'
 cookbook 'chef-solo-search', git:'https://github.com/edelight/chef-solo-search.git'
 cookbook 'git'
-cookbook 'redis'
-
+cookbook 'redis',         git: 'https://github.com/brianbianco/redisio.git'
 cookbook 'mongodb',       :path => 'site-cookbooks/mongodb'
 cookbook 'znc',           :path => 'site-cookbooks/znc'

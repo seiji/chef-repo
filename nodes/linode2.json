@@ -4,6 +4,11 @@
     "chef_environment": "_default",
     "set_fqdn": "bin.seiji.me",
 
+    "mysql": {
+        "server_root_password": "password",
+        "server_repl_password": "password",
+        "server_debian_password": "password"
+    },
     "mongodb": {
         "replicaset_name": "repSetData"
     },
@@ -11,6 +16,8 @@
     "run_list":[
         "role[base]",
         "role[common]",
+        "recipe[mysql::client]",
+        "recipe[mysql::server]",
         "recipe[mongodb::10gen_repo]",
         "recipe[mongodb::replicaset]",
         "recipe[redis]"

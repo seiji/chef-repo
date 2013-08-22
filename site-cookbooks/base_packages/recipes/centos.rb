@@ -8,7 +8,7 @@
 #
 
 %w{sysstat zsh mosh tmux emacs-nox
-git openssl-devel gcc make gdb sshfs
+git openssl-devel gcc make gdb sshfs libxml2-devel libxslt-devel
 }.each do |pkg|
   package pkg do
     action :install

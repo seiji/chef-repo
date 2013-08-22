@@ -1,5 +1,4 @@
 {
-  "sha": "40f1a1f60378383a61708d4ff39e913b38298ecf",
   "sources": {
     "hostname": {
       "locked_version": "0.1.0"
@@ -33,16 +32,27 @@
       "git": "https://github.com/edelight/chef-solo-search.git",
       "ref": "1f79c1d86e85aa3a2b01e15f90755cf60eb66a4f"
     },
+    "git": {
+      "locked_version": "2.5.2"
+    },
+    "redis": {
+      "locked_version": "1.7.0",
+      "git": "https://github.com/brianbianco/redisio.git",
+      "ref": "041cf4ed65bdf45ad03354af9be029fee879328b"
+    },
     "mongodb": {
       "locked_version": "0.12.0",
       "git": "git://github.com/edelight/chef-mongodb.git",
       "ref": "e56f80b599e05ff46039b09a0fa65d325c4ba46b"
     },
+    "mysql": {
+      "locked_version": "3.0.2"
+    },
     "znc": {
       "path": "./site-cookbooks/znc"
     },
     "hostsfile": {
-      "locked_version": "1.0.2"
+      "locked_version": "2.0.0"
     },
     "iptables": {
       "locked_version": "0.12.0"
@@ -57,10 +67,25 @@
       "locked_version": "1.4.0"
     },
     "apt": {
-      "locked_version": "1.9.2"
+      "locked_version": "2.1.0"
     },
     "ohai": {
-      "locked_version": "1.1.8"
+      "locked_version": "1.1.10"
+    },
+    "dmg": {
+      "locked_version": "1.1.0"
+    },
+    "windows": {
+      "locked_version": "1.10.0"
+    },
+    "chef_handler": {
+      "locked_version": "1.1.4"
+    },
+    "ulimit": {
+      "locked_version": "0.3.0"
+    },
+    "openssl": {
+      "locked_version": "1.0.2"
     }
   }
 }

@@ -7,7 +7,10 @@
     "mysql": {
         "server_root_password": "password",
         "server_repl_password": "password",
-        "server_debian_password": "password"
+        "server_debian_password": "password",
+        "tunable" : {
+            "skip-character-set-client-handshake" : 1
+        }
     },
     "mongodb": {
         "replicaset_name": "repSetData"

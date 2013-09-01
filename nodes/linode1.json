@@ -3,6 +3,10 @@
     "name": "linode1",
     "set_fqdn": "irc.seiji.me",
 
+    "mysql": {
+        "version": "5.6.13"
+    },
+
     "mongodb": {
         "replicaset_name": "repSetData"
     },
@@ -10,8 +14,10 @@
     "run_list":[
         "role[base]",
         "role[common]",
-        // "role[web]",
+        "role[web]",
         "role[znc]",
+        "recipe[mysql::client]",
+        "recipe[mysql::server]",
         "recipe[mongodb::10gen_repo]",
         "recipe[mongodb::replicaset]"
     ]

@@ -12,6 +12,5 @@ cookbook 'chef-solo-search', git:'https://github.com/edelight/chef-solo-search.g
 cookbook 'git'
 cookbook 'redis',         git: 'https://github.com/brianbianco/redisio.git'
 cookbook 'mongodb',       :path => 'site-cookbooks/mongodb'
-#cookbook 'mysql',         :path => 'site-cookbooks/mysql'
-cookbook 'mysql'
+cookbook 'mysql',         :path => 'site-cookbooks/mysql'
 cookbook 'znc',           :path => 'site-cookbooks/znc'

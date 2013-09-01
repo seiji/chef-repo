@@ -1,4 +1,5 @@
 {
+  "sha": "674349ab3a7d11101e8bee84c4328e1a9cbaaf95",
   "sources": {
     "hostname": {
       "locked_version": "0.1.0"
@@ -52,7 +53,7 @@
       "path": "./site-cookbooks/znc"
     },
     "hostsfile": {
-      "locked_version": "2.0.0"
+      "locked_version": "1.0.2"
     },
     "iptables": {
       "locked_version": "0.12.0"
@@ -67,10 +68,10 @@
       "locked_version": "1.4.0"
     },
     "apt": {
-      "locked_version": "2.1.0"
+      "locked_version": "1.9.2"
     },
     "ohai": {
-      "locked_version": "1.1.10"
+      "locked_version": "1.1.8"
     },
     "dmg": {
       "locked_version": "1.1.0"
@@ -85,7 +86,7 @@
       "locked_version": "0.3.0"
     },
     "openssl": {
-      "locked_version": "1.0.2"
+      "locked_version": "1.1.0"
     }
   }
 }

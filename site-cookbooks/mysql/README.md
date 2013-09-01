@@ -1,9 +1,6 @@
 mysql Cookbook
 ==============
-TODO: Enter the cookbook description here.
-
-e.g.
-This cookbook makes your favorite breakfast sandwhich.
+This cookbook supports for rhel.
 
 Requirements
 ------------

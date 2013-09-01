@@ -3,6 +3,29 @@
     "name": "linode1",
     "set_fqdn": "irc.seiji.me",
 
+    "iptables": {
+        "filter": {
+            "INPUT": [
+                "-p tcp -m tcp --dport 1181  -j ACCEPT",
+                "-p tcp -m tcp --dport 3128  -j ACCEPT",
+                "-p tcp -m tcp --dport 6697  -j ACCEPT",       // irc
+                "-p tcp -m tcp --dport 8080  -j ACCEPT",
+                "-p tcp -m tcp --dport 27017 -j ACCEPT",       // mongod
+                "-p udp -m udp --dport 60000:61000 -j ACCEPT", // mosh-server
+                "-p tcp -s 192.168.181.93 --dport 3306 -j ACCEPT" // prvate access
+            ],
+            "OUTPUT": [
+                "-p tcp -m tcp --dport 1181  -j ACCEPT",
+                "-p tcp -m tcp --dport 3128  -j ACCEPT",
+                "-p tcp -m tcp --dport 6667  -j ACCEPT",      // irc
+                "-p tcp -m tcp --dport 6697  -j ACCEPT",      // irc
+                "-p tcp -m tcp --dport 27017 -j ACCEPT",      // mongod
+                "-p tcp -m tcp --dport 9418  -j ACCEPT",
+                "-p tcp -s 192.168.184.27 --dport 3306 -j ACCEPT" // prvate access
+            ]
+        }
+    },
+
     "mysql": {
         "version": "5.6.13"
     },
@@ -13,12 +36,12 @@
 
     "run_list":[
         "role[base]",
-        "role[common]",
-        "role[web]",
-        "role[znc]",
-        "recipe[mysql::client]",
-        "recipe[mysql::server]",
-        "recipe[mongodb::10gen_repo]",
-        "recipe[mongodb::replicaset]"
+        "role[common]"
+        // "role[web]",
+        // "role[znc]",
+        // "recipe[mysql::client]",
+        // "recipe[mysql::server]",
+        // "recipe[mongodb::10gen_repo]",
+        // "recipe[mongodb::replicaset]"
     ]
 }

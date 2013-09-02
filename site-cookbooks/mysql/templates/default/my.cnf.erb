@@ -3,7 +3,7 @@
 #===========================================================
 
 [client]
-port		= <%= node.mysql.port %>
+port        = <%= node.mysql.port %>
 socket      = <%= node.mysql.socket %>
 
 #===========================================================
@@ -11,7 +11,7 @@ socket      = <%= node.mysql.socket %>
 #===========================================================
 
 [mysqld]
-port		= <%= node.mysql.port %>
+port        = <%= node.mysql.port %>
 socket      = <%= node.mysql.socket %>
 
 character-set-server = utf8mb4
@@ -87,6 +87,9 @@ innodb_support_xa = ON
 innodb_read_io_threads = 4
 innodb_write_io_threads = 4
 innodb_io_capacity = 200
+
+innodb_file_format = Barracuda
+innodb_large_prefix
 
 [mysqldump]
 quick

@@ -12,11 +12,9 @@ default[:mysql][:expire_logs_days] = "7"
 default[:mysql][:sync_binlog] = "1"
 default[:mysql][:server_id]   = "1"
 
-default[:mysql][:slave] = false
-default[:mysql][:master_host]     = "127.0.0.1"
-default[:mysql][:master_user]     = "user"
-default[:mysql][:master_password] = "password"
-default[:mysql][:master_port]     = "3306"
+default[:mysql][:slave_host]     = "127.0.0.1"
+default[:mysql][:slave_user]     = "repl"
+default[:mysql][:slave_password] = "repl"
 
 default[:mysql][:innodb_buffer_pool_size] = "256M"
 default[:mysql][:innodb_log_buffer_size]  = "16M"

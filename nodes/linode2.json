@@ -29,8 +29,13 @@
 
     "mysql": {
         "version": "5.6.13",
-        "server_id": "11"
+        "server_id": "11",
+        "slave": false,
+        "slave_host": "192.168.184.27",
+        "slave_user": "repl",
+        "slave_password": "repl"
     },
+
     "mongodb": {
         "replicaset_name": "repSetData"
     },

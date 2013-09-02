@@ -21,7 +21,7 @@ service 'mysql' do
   action [:start, :enable]
 end
 
-script "Secure_Install" do
+script "secure_install" do
   interpreter 'bash'
   user "root"
   not_if "mysql -u root -e 'show databases'"
@@ -34,5 +34,13 @@ script "Secure_Install" do
     mysql -u root -e "DROP DATABASE test;"
     mysql -u root -e "DELETE FROM mysql.db WHERE Db='test' OR Db='test\\_%';"
     mysql -u root -e "FLUSH PRIVILEGES;"
+  EOL
+end
+
+script "create_user" do
+  interpreter 'bash'
+  user "root"
+  code <<-EOL
+    mysql -u root -e "GRANT REPLICATION SLAVE ON *.* TO #{node['mysql']['slave_user']}@#{node['mysql']['slave_host']} IDENTIFIED BY '#{node['mysql']['slave_password']}';"
   EOL
 end

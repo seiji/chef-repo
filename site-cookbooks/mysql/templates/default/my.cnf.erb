@@ -56,7 +56,7 @@ log-bin=mysql-bin
 log-slave-update
 
 # GTID
-gtid-mode = ON
+gtid-mode = OFF
 enforce-gtid-consistency
 
 master_info_repository    = TABLE
@@ -64,18 +64,6 @@ relay_log_info_repository = TABLE
 
 sync_binlog = <%= node.mysql.sync_binlog %>
 server-id   = <%= node.mysql.server_id %>
-
-#-----------------------------------------------------------
-# slave setting
-#-----------------------------------------------------------
-<% if node.mysql.slave -%>
-
-master-host     =  <%= node.mysql.master_host %>
-master-user     =  <%= node.mysql.master_user %>
-master-password =  <%= node.mysql.master_password %>
-master-port     =  <%= node.mysql.master_port %>
-
-<% end %>
 
 #-----------------------------------------------------------
 # InnoDB setting

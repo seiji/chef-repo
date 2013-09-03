@@ -7,8 +7,31 @@
 # All rights reserved - Do Not Redistribute
 #
 
-%w{sysstat zsh mosh tmux emacs-nox
-git openssl-devel gcc make gdb sshfs libxml2-devel libxslt-devel
+%w{
+  bzip2-devel
+  db4-devel
+  emacs-nox
+  gcc
+  gcc-c++ 
+  gdb
+  gdbm-devel
+  git
+  libxml2-devel
+  libxslt-devel
+  make
+  mosh
+  ncurses-devel
+  openssl-devel
+  readline-devel
+  sqlite-devel
+  sshfs
+  sysstat
+  tcl-devel
+  tk-devel
+  tmux
+  zlib
+  zlib-devel
+  zsh
 }.each do |pkg|
   package pkg do
     action :install

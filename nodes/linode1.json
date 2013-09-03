@@ -34,17 +34,23 @@
         "slave_password": "repl"
     },
 
+    "nodejs": {
+        "make_threads": "4"
+    },
+    
     "mongodb": {
         "replicaset_name": "repSetData"
     },
 
     "run_list":[
         // "role[base]",
-        // "role[common]"
+        "role[common]",
         // "role[web]",
         // "role[znc]",
         // "recipe[mysql::client]",
-        "recipe[mysql::server]"
+        // "recipe[mysql::server]",
+        "recipe[nodejs]"
+        
         // "recipe[mongodb::10gen_repo]",
         // "recipe[mongodb::replicaset]"
     ]

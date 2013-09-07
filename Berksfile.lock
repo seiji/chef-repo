@@ -30,7 +30,12 @@
     "chef-solo-search": {
       "locked_version": "0.4.0",
       "git": "https://github.com/edelight/chef-solo-search.git",
-      "ref": "1f79c1d86e85aa3a2b01e15f90755cf60eb66a4f"
+      "ref": "a28e7f25ab4afb53f9a55dd49d8b1277d0374c29"
+    },
+    "daemontools": {
+      "locked_version": "1.1.1",
+      "git": "https://github.com/seiji/daemontools.git",
+      "ref": "d028b74f59233efc51171942e7f9591b291c04f5"
     },
     "git": {
       "locked_version": "2.5.2"
@@ -41,15 +46,15 @@
       "ref": "041cf4ed65bdf45ad03354af9be029fee879328b"
     },
     "mongodb": {
-      "locked_version": "0.12.0",
-      "git": "git://github.com/edelight/chef-mongodb.git",
-      "ref": "e56f80b599e05ff46039b09a0fa65d325c4ba46b"
+      "path": "./site-cookbooks/mongodb"
     },
     "mysql": {
-      "locked_version": "3.0.2"
+      "path": "./site-cookbooks/mysql"
     },
     "nodejs": {
-      "locked_version": "1.3.0"
+      "locked_version": "0.1.0",
+      "git": "https://github.com/hectcastro/chef-nodejs.git",
+      "ref": "575452c831fa766d4ae860d48615a1439d042656"
     },
     "znc": {
       "path": "./site-cookbooks/znc"
@@ -75,6 +80,9 @@
     "ohai": {
       "locked_version": "1.1.10"
     },
+    "ucspi-tcp": {
+      "locked_version": "1.0.2"
+    },
     "dmg": {
       "locked_version": "1.1.0"
     },
@@ -86,9 +94,6 @@
     },
     "ulimit": {
       "locked_version": "0.3.0"
-    },
-    "openssl": {
-      "locked_version": "1.0.2"
     }
   }
 }

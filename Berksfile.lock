@@ -59,6 +59,11 @@
     "znc": {
       "path": "./site-cookbooks/znc"
     },
+    "etcd": {
+      "locked_version": "1.2.4",
+      "git": "https://github.com/spheromak/etcd-cookbook.git",
+      "ref": "4bcc159f09eed4c99276c669dbc1356817cda158"
+    },
     "hostsfile": {
       "locked_version": "2.0.0"
     },
@@ -94,6 +99,9 @@
     },
     "ulimit": {
       "locked_version": "0.3.0"
+    },
+    "ark": {
+      "locked_version": "0.3.2"
     }
   }
 }

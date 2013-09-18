@@ -37,6 +37,9 @@
     "nodejs": {
         "make_threads": "4"
     },
+    "etcd": {
+        "version": "0.1.1"
+    },
     
     "mongodb": {
         "replicaset_name": "repSetData"
@@ -49,7 +52,8 @@
         // "role[znc]",
         // "recipe[mysql::client]",
         // "recipe[mysql::server]",
-        "recipe[nodejs]"
+        //"recipe[nodejs]",
+        "recipe[etcd]"
         
         // "recipe[mongodb::10gen_repo]",
         // "recipe[mongodb::replicaset]"

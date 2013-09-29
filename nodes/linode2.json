@@ -45,9 +45,9 @@
     },
 
     "run_list":[
-        // "role[base]",
-        // "role[common]",
-        "role[web]"
+        "role[base]",
+        "role[common]"
+        //"role[web]"
 
         // "recipe[mysql::client]",
         // "recipe[mysql::server]",

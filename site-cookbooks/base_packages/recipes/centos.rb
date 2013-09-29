@@ -22,6 +22,8 @@
   mosh
   ncurses-devel
   openssl-devel
+  python-devel
+  python-setuptools
   readline-devel
   sqlite-devel
   sshfs

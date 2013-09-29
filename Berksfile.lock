@@ -35,7 +35,7 @@
     "daemontools": {
       "locked_version": "1.1.1",
       "git": "https://github.com/seiji/daemontools.git",
-      "ref": "d028b74f59233efc51171942e7f9591b291c04f5"
+      "ref": "5cb270614657779a28698d619b1d4403c33ee750"
     },
     "git": {
       "locked_version": "2.5.2"

@@ -45,14 +45,14 @@
     },
 
     "run_list":[
-        "role[base]",
-        "role[common]"
+        // "role[base]",
+        // "role[common]"
         //"role[web]"
 
         // "recipe[mysql::client]",
         // "recipe[mysql::server]",
         // "recipe[nodejs]",
-        // "recipe[daemontools]",
+        "recipe[daemontools]"
         
         // "recipe[mongodb::10gen_repo]",
         // "recipe[mongodb::replicaset]",

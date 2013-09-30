@@ -21,7 +21,7 @@
         "recipe[yum::fastestmirror]",
         "recipe[yum::update]",
         "recipe[openssh]",
-        "recipe[ntp]",
+        // "recipe[ntp]",
         "recipe[sysctl]",
         "recipe[timezone]",
         "recipe[iptables]",

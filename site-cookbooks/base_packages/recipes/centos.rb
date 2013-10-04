@@ -23,6 +23,7 @@
   ncurses-devel
   openssl-devel
   python-devel
+  python-pip
   python-setuptools
   readline-devel
   sqlite-devel

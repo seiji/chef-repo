@@ -6,7 +6,7 @@
     "iptables": {
         "filter": {
             "INPUT": [
-                "-p tcp -m tcp --dport 1181  -j ACCEPT",
+                "-p tcp -m tcp --dport 1181  -j ACCEPT",       // mitmproxy
                 "-p tcp -m tcp --dport 3128  -j ACCEPT",
                 "-p tcp -m tcp --dport 6697  -j ACCEPT",       // irc
                 "-p tcp -m tcp --dport 8080  -j ACCEPT",
@@ -15,7 +15,7 @@
                 "-p tcp -s 192.168.181.93 --dport 27017 -j ACCEPT" // prvate access
             ],
             "OUTPUT": [
-                "-p tcp -m tcp --dport 1181  -j ACCEPT",
+                "-p tcp -m tcp --dport 1181  -j ACCEPT",      // mitmproxy
                 "-p tcp -m tcp --dport 3128  -j ACCEPT",
                 "-p tcp -m tcp --dport 6667  -j ACCEPT",      // irc
                 "-p tcp -m tcp --dport 6697  -j ACCEPT",      // irc

@@ -40,7 +40,7 @@
         "make_threads": "4"
     },
     "etcd": {
-        "version": "0.1.1"
+        "version": "0.1.2"
     },
     
     "mongodb": {
@@ -48,14 +48,14 @@
     },
 
     "run_list":[
-        "role[base]",
-        "role[common]"
+        // "role[base]",
+        // "role[common]"
         // "role[web]",
         // "role[znc]",
         // "recipe[mysql::client]",
         // "recipe[mysql::server]",
         //"recipe[nodejs]",
-        // "recipe[etcd]"
+        "recipe[etcd]"
         
         // "recipe[mongodb::10gen_repo]",
         // "recipe[mongodb::replicaset]"
